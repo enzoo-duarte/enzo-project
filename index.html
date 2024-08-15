@@ -7,55 +7,59 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title> Home - Project Solutions </title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
-<body>
-
-    <!-- banner nuevo -->
-     <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid ab quibusdam corporis veritatis quas? Quisquam, esse porro alias repudiandae a iure itaque magni placeat illo, eligendi recusandae fuga pariatur mollitia?
-     </div>
+<body class="roboto-light">
+    <!-- Banner superior -->
     <header>
-        <a href="index.html">
-            <img src="img/logo.png" alt="Logo-Project-Solutions" class="logo">
-        </a>
-    
-        <nav>
+        <div class="contenedor-logo">
+            <a href="index.html">
+                <img src="img/logo-3.jpg" alt="Logo-Project-Solutions" class="logo">
+            </a>
+        </div>
+        <nav class="contenedor-navbar">
             <ul>
                 <li>
-                    <a href="pages/nosotros.html"> Nosotros </a>
+                    <a href="pages/nosotros.html">Nosotros</a>
                 </li>
                 <li>
-                    <a href="pages/servicios.html"> Servicios </a>
+                    <a href="pages/servicios.html">Servicios</a>
                 </li>
                 <li>
-                    <a href="pages/contacto.html"> Contacto </a>
+                    <a href="pages/portfolio.html">Portfolio</a>
+                </li>
+                <li>
+                    <a href="pages/contacto.html">Contacto</a>
                 </li>
             </ul>
         </nav>
     </header>
-
+    <!-- Contenido principal -->
     <main>
+        <!-- lado izquierdo -->
         <h1>
             La visión inspiradora que necesitas para impulsar tu proyecto.
         </h1>
+        <!-- lado derecho, esto va sobre la imagen-->
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit atque maxime temporibus! Excepturi animi
-            voluptatibus magnam unde perferendis odit officia nihil illo laboriosam facere laudantium quam tempore
-            velit, porro quae?
+            Texto principal (descripcion de la pagina)
         </p>
+        <!--  imagen sobre la cual va a estar el texto-->
         <div>
             <img src="img/banner.png" alt="Imagen-de-banner">
         </div>
-        
-        <section>
-            <p>
+        <!-- Banner inferior clientes -->
+        <section class="seccion-clientes">
+            <h4>
                 Clientes
-            </p>
-            <img src="img/client-template-1.png" alt="cliente-uno">
-            <img src="img/client-template-2.png" alt="cliente-dos">
-            <img src="img/client-template-3.png" alt="cliente-tres">
-            <img src="img/client-template-4.png" alt="client-cuatro">
+            </h4>
+            <img src="img/client-template-1.png" alt="cliente-inicial-letra-k" class="cliente-uno">
+            <img src="img/client-template-2.png" alt="cliente-corazon-ave-rayo" class="cliente-dos">
+            <img src="img/client-template-3.png" alt="cliente-pulpo" class="cliente-tres">
+            <img src="img/client-template-4.png" alt="cliente-kimawa" class="cliente-cuatro">
         </section>
     </main>
 
