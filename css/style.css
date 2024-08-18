@@ -1,35 +1,26 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
 
-html{
+#cuerpo-pagina {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
 }
 
-body header{
+body header {
     background-color: rgb(21, 8, 38);
     height: 100px; 
     display: flex;
     align-items: center; 
     justify-content: space-between; 
-    padding: 0 40px; 
-}
-.contenedor-logo {
-    flex: 1; 
-    justify-content: flex-start;
+    padding: 0 25px; 
 }
 
 .logo {
     height: 75px;
-}
-
-.contenedor-navbar {
-    flex: 2; 
-    text-align: right; 
 }
 
 body header nav ul {
@@ -41,57 +32,86 @@ body header nav ul {
     padding: 0; 
 }
 
-body header nav ul li a{
+body header nav ul li a {
     text-decoration: none;
     color: rgb(124 64 194); 
     font-size: 18px;
 }
 
-body header nav ul li a:hover{
+body header nav ul li a:hover {
     color: white;
 }
 
-main{
-    padding: 10px;
+main {
+    margin: 50px 50px;
+    height: 70vh;
+}
+
+main h1 {
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+
+main p{
     text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
 }
 
-main h1{
-    display: flex;
-    justify-content: start;
-    
-}
-
-main div{
+main div {
     height: 350px;
 }
 
-main div img{
+main div img {
     object-fit: cover;
     width: 90%;
     height: 100%;
 }
 
-.contenedor-servicio{
+.contenedor-servicio {
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
 
-.servicio{
+.servicio {
     object-fit: cover;
     width: 90%;
     height: 100%;
 }
 
-.seccion-clientes{
+.seccion-clientes {
     width: 100%;
     background-color: #f0f0f0; 
 }
 
-.roboto-light {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+.text-purple {
+    color: #8011f2;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(21, 8, 38);
+    color: white;
+    border: 2px solid rgb(21, 8, 38); 
+}
+
+.btn:hover{
+    background-color: white;
+    color: #8011f2;
+    border: 2px solid #8011f2;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.ult-parrafo{
+    margin-bottom: 50px;
 }
