@@ -1,3 +1,5 @@
+/* ESTILOS GENERALES */
+
 * {
     margin: 0%;
     padding: 0%;
@@ -23,6 +25,38 @@ body {
     background-repeat: no-repeat;
 }
 
+main div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* jQuery */
+/* Estilos para animar las cartas desde la izquierda y la derecha */
+
+.slide-in-left, .slide-in-right {
+    opacity: 0;
+    transition: transform 1.0s ease-out, opacity 1.0s ease-out;
+}
+
+.slide-in-left {
+    transform: translateX(-100%);
+}
+
+.slide-in-right {
+    transform: translateX(100%);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* estilos generales del header */
+
 .container-fluid {
     padding-left: 30px;
     padding-right: 30px;
@@ -47,7 +81,7 @@ body {
     position: absolute;
     left: 0;
     bottom: -2px;
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
 
 .navbar-nav .nav-link:hover::after {
@@ -58,42 +92,302 @@ body {
     color: rgb(129 57 210);
 }
 
-main {
-    flex: 1;
-    margin: 50px 50px;
+/* estilos botón active del navbar */
+
+.navbar-nav .nav-link.active::after {
+    width: 100%;
 }
 
-main h1 {
+.navbar-nav .nav-link.active {
+    color: rgb(129 57 210); 
+}
+
+.user {
+    object-fit: cover;
+    font-size: 25px;
+    color: rgb(87 87 87);
+}
+
+.user:hover {
+    color: rgb(129 57 210);
+}
+
+/* Estilos del footer */
+
+.footer {
+    color: white;
+    background: rgb(47 6 89);
+}
+
+.footer .grupo-1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 50px 50px;
+}
+
+.footer .grupo-1 .box {
     text-align: center;
-    font-size: 2.5rem;
+}
+
+.footer .grupo-1 .box figure {
+    width: 100%;
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0; 
+}
+
+.footer .grupo-1 .box figure img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+.footer .grupo-1 .box h2 {
     margin-bottom: 25px;
 }
 
-main p {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 15px;
+.footer .grupo-1 .box p {
+    color: rgb(176 176 176);
+    line-height: 1.5;
 }
 
-main div img {
-    object-fit: cover;
-    width: 90%;
-    height: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.footer .grupo-1 .box a {
+    color: rgb(176 176 176); 
+    text-decoration: none; 
 }
 
-footer {
+.footer .grupo-1 .box a:hover {
     color: white;
-    background-image: linear-gradient(rgb(129 57 210), rgb(79 35 132));
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    font-size: 0.8rem; 
-    white-space: nowrap; 
 }
+
+/* red social */
+
+.footer .grupo-1 .red-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+}
+
+.footer .grupo-1 .red-social a {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    background-color: rgb(33 37 41);
+    border-radius: 50%;
+}
+
+.footer .grupo-1 .red-social a:hover {
+    color: rgb(129 57 210);
+}
+
+.footer .grupo-2 {
+    background-color: rgb(129 57 210);
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.footer .grupo-2 small {
+    font-size: 15px;
+}
+
+/* RESPONSIVE mobile */
+
+@media screen and (max-width: 768px) {
+    .footer .grupo-1 {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        padding: 50px 0;
+        align-items: center;
+    }
+    .footer .grupo-1 .box {
+        align-items: center;
+    }
+    
+    /* Asegurando que los íconos de redes sociales permanezcan en fila en pantallas más pequeñas */
+    .footer .grupo-1 .red-social {
+        justify-content: center;
+        gap: 15px; /* Ajustar el espaciado en pantallas pequeñas */
+    }
+}
+
+/*ESTILOS DE HOME */
+
+.seccion1-home.col-lg-6 {
+    margin-bottom: 20px;
+    margin-top: 40px; 
+}
+
+@media (max-width: 992px) {
+    .seccion1-home.col-lg-6 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+}  
+
+/* portada */
+
+.container {
+    text-align: center;
+    
+}
+
+.ult-parrafo{
+    margin-bottom: 40px;
+}
+
+.subtitulo1-home {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.subtitulo2-home {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+
+.text-purple {
+    color: rgb(129 57 210);
+}
+
+.btn {
+    background-color: rgb(129 57 210);
+    color: white;
+    border: 2px solid rgb(129 57 210);
+    display: inline-block; 
+    width: auto;           
+    padding: 10px 10px;    
+    text-align: center;    
+    margin: 0 auto;
+}
+
+.btn:hover {
+    background-color: white;
+    color: rgb(129 57 210);
+    border: 2px solid rgb(129 57 210);
+}
+
+/* estilos para la sección pestañas */
+
+.temas-relacionados {
+    padding: 15px 30px; 
+    margin-top: 20px; 
+    margin-bottom: 40px; 
+    border-radius: 0px;
+}
+
+.temas-texto {
+    display: flex;
+    justify-content: flex-start;
+    color: black;
+    font-size: 1.2rem;
+    margin-top: 15px; 
+}
+
+
+.p.temas-texto {
+    margin-top: 0; 
+    margin-bottom: 0; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+}
+
+.temas-botones {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: flex-start;
+}
+
+.btn-tema {
+    background-color: #f0f0f0;
+    color: black;
+    padding: 5px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    font-size: 0.8rem;
+    
+}
+
+.btn-tema:hover {
+    background-color: #ddd;
+    border-color: #bbb;
+    color: #000;
+}
+
+/* Color fondo del Carousel */
+
+.bg-custom {
+    background-color: rgb(129 57 210)
+}
+
+/* estilos del Carousel */
+
+.carousel-item {
+    min-height: 400px; 
+    padding: 40px 0;
+}
+.carousel-container {
+    align-content: center;
+}
+
+.icono-carousel {
+    font-size: 25px;
+    text-align: center;
+}
+
+/* controles del Carousel*/
+
+.carousel-control-prev, .carousel-control-next {
+    z-index: 1; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 5%; 
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #ffffff; 
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* estilos boton seccion suscribete */
+
+.btn-custom {
+    background-color:rgb(33 37 41);
+    color: white;
+    border: 2px solid white;
+    display: inline-block; 
+    width: auto;           
+    padding: 10px 10px;    
+    text-align: center;    
+    margin: 0 auto;
+    
+}
+
+.btn-custom:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(33 37 41);
+}
+
+form .form-control:focus {
+    border-color: rgb(129 57 210);
+}
+
+/* ESTILOS DE SERVICIOS */
 
 .contenedor-servicio {
     margin-top: 20px;
@@ -113,31 +407,5 @@ footer {
     background-color: #f0f0f0; 
     display: flex;
     justify-content: space-between;
-}
-
-.text-purple {
-    color: rgb(129 57 210);
-}
-
-.btn{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(129 57 210);
-    color: white;
-    border: 2px solid rgb(129 57 210);
-}
-
-.btn:hover{
-    background-color: white;
-    color: rgb(129 57 210);
-    border: 2px solid rgb(129 57 210)
-}
-
-.ult-parrafo{
-    margin-bottom: 40px;
-}
-
-.col-lg-6 {
-    margin-bottom: 25px; 
 }
 
