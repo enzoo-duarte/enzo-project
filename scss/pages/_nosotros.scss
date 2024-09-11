@@ -1,0 +1,206 @@
+@import "../base/_colores";
+
+// General 
+.nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 50px;
+    padding: 50px;
+}
+
+// Bloques 
+
+.bloque {
+    border-radius: 0.375rem;
+    overflow: hidden;
+    padding: 50px;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    background-color: $fondo-1;
+}
+
+.video h1, .historia.mapa h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+// Estilos para el primer bloque
+
+.video {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center; 
+  align-items: center;     
+  height: 100%;            
+  padding: 50px;           
+}
+
+.video h1 {
+  margin-bottom: 20px;     
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.video iframe {
+  width: 100%;             
+  max-width: 560px;        
+  height: auto;            
+  aspect-ratio: 16/9;     
+  border-radius: 0.375rem;     
+}
+
+// Estilos para el segundo bloque
+
+.bloque.historia {
+  position: relative;
+  padding: 50px;
+  margin-bottom: 0px;
+
+  h2 {
+    color: white;
+      position: relative;
+      z-index: 2;
+      background-color: $principal-1; 
+      padding: 10px 20px;
+      border-radius: 0.375rem;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+  }
+
+  .parrafo-historia {
+      padding: 30px;
+      background-color: white;
+      border-radius: 0.375rem;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      position: relative;
+  }
+
+  p {
+      margin-bottom: 20px;
+      line-height: 1.5;
+      text-align: center;
+  }
+}
+
+// Estilos para el tercer bloque
+
+.animado {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.375rem;
+  animation: slideInUp 1.5s ease-out forwards; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.animado img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+  display: block;
+  object-fit: cover;
+}
+
+@keyframes slideInUp {
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.texto-animado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8); 
+  padding: 20px 20px;
+  border-radius: 0.375rem;
+  color: white;
+  text-align: center;
+  opacity: 0; 
+  text-decoration: none;
+  transition: opacity 0.5s ease-in-out 1.5s, transform 0.3s ease;
+}
+
+.animado.show-text .texto-animado {
+  align-items: center;
+  opacity: 1; 
+}
+
+.texto-animado:hover {
+  transform: translate(-50%, -50%) scale(1.05); 
+}
+
+// Responsive
+
+@media (max-width: 992px) {
+    .nosotros {
+        grid-template-columns: 1fr; 
+        gap: 30px; 
+    }
+
+    .animado {
+        animation-duration: 2s; 
+    }
+
+    .texto-animado {
+        font-size: 15px;
+        padding: 20px;
+    }
+}
+
+.bloque.animado.show-text {
+  display: flex;
+  align-items: center;
+}
+
+// Estilos para el cuarto bloque  
+
+.bloque.mapa {
+  color: white;
+  position: relative;
+  padding: 50px;
+  background-color: $fondo-1;
+  border-radius: 0.375rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  text-align: center;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+    color: white; 
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 0.375rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 450px;
+    margin-bottom: 50px;
+  }
+}
+
+// Responsive
+
+@media (max-width: 992px) {
+  .bloque.mapa {
+    color: white;
+    padding: 50px;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+    }
+
+    iframe {
+      min-height: 300px;
+    }
+  }
+}
+

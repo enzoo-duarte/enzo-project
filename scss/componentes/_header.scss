@@ -1,0 +1,56 @@
+@import "../base/colores";
+
+// Estilos generales del header
+
+.container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.navbar-nav {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    align-items: center;
+
+    &::after {
+        content: '';
+        height: 4px;
+        width: 0%;
+        background: $principal-1;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        transition: all 0.2s;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &:hover {
+        color: $principal-1;
+    }
+
+    &.active::after {
+        width: 100%;
+    }
+
+    &.active {
+        color: $principal-1;
+    }
+}
+
+.user {
+    object-fit: cover;
+    font-size: 25px;
+    color: $principal-2;
+
+    &:hover {
+        color: $principal-1;
+    }
+}

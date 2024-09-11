@@ -1,0 +1,18 @@
+// Botón personalizado
+
+@mixin boton-personalizado($principal-1) {
+    background-color: $principal-1;
+    color: white;
+    border: 2px solid $principal-1;
+    display: inline-block;
+    width: auto;
+    padding: 10px 10px;
+    text-align: center;
+    margin: 0 auto;
+
+    &:hover {
+        background-color: white;
+        color: $principal-1;
+        border: 2px solid $principal-1;
+    }
+}

@@ -1,0 +1,177 @@
+@import "../base/_colores";
+
+// Sección principal 
+
+.text-purple {
+    color: $principal-1;
+}
+
+.seccion1-home.col-lg-6 {
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.container {
+    text-align: center;
+    
+}
+
+.subtitulo1-home{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.ult-parrafo {
+    margin-bottom: 40px;
+}
+
+.btn {
+    background-color: $principal-1;
+    color: white;
+    border: 2px solid $principal-1;
+    display: inline-block;
+    width: auto;
+    padding: 10px 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+    .btn:hover {
+    background-color: white;
+    color: $principal-1;
+    border: 2px solid $principal-1;
+}
+
+// Sección temas relacionados (pestañas)
+
+.temas-relacionados {
+    padding: 15px 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 0px;
+}
+
+.temas-texto {
+    display: flex;
+    justify-content: flex-start;
+    color: black;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.p.temas-texto {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.temas-botones {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: flex-start;
+}
+
+.btn-tema {
+    background-color: rgb(240, 240, 240);
+    color: black;
+    padding: 5px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid rgb(204, 204, 204);
+    font-size: 0.8rem;
+}
+
+.btn-tema:hover {
+    background-color: rgb(221, 221, 221);
+    border-color: rgb(187, 187, 187);
+}
+
+// Sección cartas
+
+.subtitulo2-home {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.card-container {
+    background-color: white;
+}
+
+// Animaciones de las cartas
+.slide-in-left, .slide-in-right {
+    opacity: 0;
+    transition: transform 1.0s ease-out, opacity 1.0s ease-out;
+}
+
+.slide-in-left {
+    transform: translateX(-100%);
+}
+
+.slide-in-right {
+    transform: translateX(100%);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+// Sección Carousel
+.bg-custom {
+    background-color: $principal-1;
+}
+
+.carousel-item {
+    min-height: 400px;
+    padding: 40px 0;
+}
+
+    .carousel-container {
+    align-content: center;
+}
+
+    .icono-carousel {
+    font-size: 25px;
+    text-align: center;
+}
+
+// Controles Carousel
+    .carousel-control-prev, .carousel-control-next {
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5%;
+}
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+//Sección suscríbete
+
+.btn-custom {
+    background-color: $fondo-1;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 10px;
+    margin: 0 auto;
+}
+
+    .btn-custom:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid $fondo-1;
+}
+//Responsive
+
+@media (max-width: 992px) {
+    .seccion1-home.col-lg-6 {
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+}
